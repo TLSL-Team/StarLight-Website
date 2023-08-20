@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<!-- 作者:Disy & StarLight，拷贝及使用前请务必征得作者同意！ -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <meta name="description" content="StarLight Website">
+  <meta name="keywords" content="Minecraft, StarLight, mc, 生存, 生电, 我的世界服务器, 高性能">
+  <meta name="author" content="Disy">
+
+  <title>SLS捐赠鸣谢</title>
+
+  <link rel="stylesheet" href="./css/main-style.css">
+  <link rel="stylesheet" href="./css/stars.css">
+  <link rel="shortcut icon" type="img/png" href="img/icon/icon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./img/icon/icon-57.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./img/icon/icon-72.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./img/icon/icon-114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./img/icon/icon-144.png">
+  <link rel="apple-touch-icon" href="./img/icon/icon-64.png">
+
+  <script type="text/javascript" src="./js/utils.js"></script>
+  <script type="text/javascript" src="./js/fade.js"></script>
+  <script type="text/javascript" src="./js/render.js"></script>
+  <script type="text/javascript" src="./js/sakura-render.js"></script>
+  <script type="text/javascript" src="./js/hardware-donation-page.js"></script>
+</head>
+  <div class="main-container">
+    <div id="mobile-sidebar-btn" class="hidden">☰</div>
+    <div class="sidebar-block"></div>
+    <div class="sidebar">
+      <!-- 这里包含侧边栏的元素，由js动态添加 -->
+    </div>
+    <div class="mobile-sidebar">
+      <a id="close-sidebar-btn">×</a>
+      <!-- 这里则是手机版的侧边栏元素 -->
+    </div>
+
+    <div class="main-frame">
+      <!-- 主展示页 -->
+      <div class="main-page">
+        <div class="title">
+          <h1 id="donation-title">StarLight 捐助鸣谢</h1>
+          <div class="subtitle"><span id="subtitle-text">感谢每一位曾经支持过SLS的玩家！</span></div>
+          <a id="scroll-btn"></a>
+        </div>
+        <div class="background">
+          <img src="./img/background/bg3.png" alt="background">
+        </div>
+        <div class="stars-container">
+          <div class="stars"></div>
+          <div class="star2"></div>
+          <div class="star3"></div>
+        </div>
+      </div>
+
+      <div class="donation-page hardware-donation-page">
+        <div class="donation-tip">
+          <h3>这是...新页面？</h3><br>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于服务器的运转年限已长，服务器必须在2年之后更换一次硬件，然而由于相关事宜服主Disy与家里人协商破裂，导致这笔资金的来源被迫中断，详细情况可见SLS交流群内公告。因此服主Disy需要大家的帮助，来顺利在2年内筹措够更换的资金，预计筹措金额为9000元。由于该部分捐赠将专款专用，因而会暂时与主捐赠鸣谢界面分开，如果你想看旧的主捐赠鸣谢界面，请
+            <a href="/donation.html">点我跳转</a>,
+            <strong>不论捐赠多少，都可以进入下面的捐赠名单哦！StarLight感谢你们每个人的付出！</strong>
+          </p>
+        </div>
+
+        <div class="battery-container">
+          <div class="battery-header"></div>
+          <div class="battery" id="battery"></div>
+          <div class="battery-copy" id="battery-copy">
+            <div class="g-wave"></div>
+            <div class="g-wave"></div>
+            <div class="g-wave"></div>
+          </div>
+          <div id="battery-percent">募捐进度:0%</div>
+        </div>
+
+        <div class="donation-box" id="hardware-donation-box" onmouseover="movIn()" onmouseout="movOut()">
+          <h3 class="donation-list-title">捐赠鸣谢名单</h3>
+          <p class="donation-list-sub">感谢你们的贡献，铸就了今天美好的StarLight！</p>
+          <p class="donation-list-sub"><strong>(是你们每个人的帮助，才让服务器有机会渡过难关)</strong></p>
+          <p class="donation-list-sub"><strong>(下方按捐赠时间排序！)</strong></p>
+          <div id="donation-text" style="position: relative;top: 70px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<body>
+
+</body>
+</html>

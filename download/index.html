@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<!-- 作者:Disy & StarLight，拷贝及使用前请务必征得作者同意！ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <meta name="description" content="StarLight Website">
+    <meta name="keywords" content="Minecraft, StarLight, mc, 生存, 生电, 我的世界服务器, 高性能">
+    <meta name="author" content="Disy">
+
+    <title>SLS下载页</title>
+
+    <link rel="stylesheet" href="../css/main-style.css">
+    <link rel="stylesheet" href="../css/stars.css">
+    <link rel="shortcut icon" type="img/png" href="/img/icon/icon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/icon/icon-57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/icon/icon-72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/icon/icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/icon/icon-144.png">
+    <link rel="apple-touch-icon" href="/img/icon/icon-64.png">
+
+    <script type="text/javascript" src="../js/utils.js"></script>
+    <script type="text/javascript" src="../js/fade.js"></script>
+    <script type="text/javascript" src="../js/render.js"></script>
+    <script type="text/javascript" src="../js/sakura-render.js"></script>
+    <script type="text/javascript" src="../js/download-page.js"></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div id="mobile-sidebar-btn" class="hidden">☰</div>
+        <div class="sidebar-block"></div>
+        <div class="sidebar">
+            <!-- 这里包含侧边栏的元素，由js动态添加 -->
+        </div>
+        <div class="mobile-sidebar">
+            <a id="close-sidebar-btn">×</a>
+            <!-- 这里则是手机版的侧边栏元素 -->
+        </div>
+
+        <div class="main-frame">
+            <!-- 主展示页 -->
+            <div class="main-page">
+                <div class="title">
+                    <h1 id="donation-title">StarLight 资源下载</h1>
+                    <div class="subtitle"><span id="subtitle-text">各类进服可能用到的资源大合集！</span></div>
+                    <br><br>
+                    <a id="download-btn"></a>
+                </div>
+                <div class="background">
+                    <img src="/img/background/bg4.png" alt="background">
+                </div>
+                <div class="stars-container">
+                    <div class="stars"></div>
+                    <div class="star2"></div>
+                    <div class="star3"></div>
+                </div>
+            </div>
+
+            <div class="download-page">
+                <h1>选择要下载的资源类别</h1>
+                <!-- 顶端导航栏，用于切换不同的下载类别 -->
+                <div class="navigation-bar no-select" id="home-navigation-bar">
+                    <nav>
+                        <label class="top-btn">
+                            <a>
+                                <span class="only-large">Java</span>
+                            </a>
+                        </label>
+
+                        <label class="top-btn">
+                            <a>
+                                <span class="only-large">BE端</span>
+                            </a>
+                        </label>
+
+                        <label class="top-btn">
+                            <a>
+                                <span class="only-large">其他</span>
+                            </a>
+                        </label>
+
+                        <div class="download-tab" id="top-tab"></div>
+                    </nav>
+                </div>
+
+                <div class="download-card-container hidden"></div>
+
+                <div class="load-frame">
+                    <div class="failed hidden" id="failed-msg"></div>
+                    <div class="loader">
+                        <span style="--i:1">L</span>
+                        <span style="--i:2">o</span>
+                        <span style="--i:3">a</span>
+                        <span style="--i:4">d</span>
+                        <span style="--i:5">i</span>
+                        <span style="--i:6">n</span>
+                        <span style="--i:7">g</span>
+                        <span style="--i:8">.</span>
+                        <span style="--i:9">.</span>
+                        <span style="--i:10">.</span>
+                        <span style="--i:11">.</span>
+                        <span style="--i:12">.</span>
+                        <span style="--i:13">.</span>
+                    </div>
+                </div>
+
+                <a id="load-more-btn"> 点我查看更多 </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

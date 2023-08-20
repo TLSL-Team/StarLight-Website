@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<!-- 作者:Disy & StarLight，拷贝及使用前请务必征得作者同意！ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <meta name="description" content="StarLight Website">
+    <meta name="keywords" content="Minecraft, StarLight, mc, 生存, 生电, 我的世界服务器, 高性能">
+    <meta name="author" content="Disy">
+
+    <title>StarLight服务器</title>
+
+    <link rel="stylesheet" href="./css/stars.css">
+    <link rel="stylesheet" href="./css/main-style.css">
+    <link rel="shortcut icon" type="img/png" href="img/icon/icon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./img/icon/icon-57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./img/icon/icon-72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./img/icon/icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./img/icon/icon-144.png">
+    <link rel="apple-touch-icon" href="./img/icon/icon-64.png">
+    <link rel="apple-touch-startup-image" href="/img/icon/startup.png">
+
+    <script type="text/javascript" src="./js/3rd-part/vanilla-tilt.babel.min.js"></script>
+    <script type="text/javascript" src="./js/3rd-part/echarts.min.js"></script>
+    <script type="text/javascript" src="./js/fade.js"></script>
+    <script type="text/javascript" src="./js/utils.js"></script>
+    <script type="text/javascript" src="./js/render.js"></script>
+    <script type="text/javascript" src="./js/sakura-render.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/websocket/initConnection.js"></script>
+</head>
+
+<body>
+    <div class="main-container">
+
+        <div id="mobile-sidebar-btn" class="hidden">☰</div>
+        <div class="sidebar-block"></div>
+        <div class="sidebar">
+            <!-- 这里包含侧边栏的元素，由js动态添加 -->
+        </div>
+        <div class="mobile-sidebar">
+            <a id="close-sidebar-btn">×</a>
+            <!-- 这里则是手机版的侧边栏元素 -->
+        </div>
+
+        <div class="main-frame">
+            <!-- 主展示页 -->
+            <div class="main-page">
+                <div class="title">
+                    <h1>StarLight服务器</h1>
+                    <div class="subtitle"><span id="subtitle-text">高性能且有趣的综合Minecraft服务器</span></div>
+                    <a id="start-btn" href="https://jq.qq.com/?_wv=1027&k=rt0b2rlH"></a>
+                </div>
+                <div class="background">
+                    <img src="./img/background/bg1.jpg" alt="background">
+                </div>
+                <div class="stars-container">
+                    <div class="stars"></div>
+                    <div class="star2"></div>
+                    <div class="star3"></div>
+                </div>
+                <div class="split-block">
+                    <svg class="nectar-shape-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" preserveAspectRatio="none">
+                        <path d="M 1014 264 v 122 h -808 l -172 -86 s 310.42 -22.84 402 -79 c 106 -65 154 -61 268 -12 c 107 46 195.11 5.94 275 137 z"></path>
+                        <path d="M -302 55 s 235.27 208.25 352 159 c 128 -54 233 -98 303 -73 c 92.68 33.1 181.28 115.19 235 108 c 104.9 -14 176.52 -173.06 267 -118 c 85.61 52.09 145 123 145 123 v 74 l -1306 10 z"></path>
+                        <path d="M -286 255 s 214 -103 338 -129 s 203 29 384 101 c 145.57 57.91 178.7 50.79 272 0 c 79 -43 301 -224 385 -63 c 53 101.63 -62 129 -62 129 l -107 84 l -1212 12 z"></path>
+                        <path d="M -24 69 s 299.68 301.66 413 245 c 8 -4 233 2 284 42 c 17.47 13.7 172 -132 217 -174 c 54.8 -51.15 128 -90 188 -39 c 76.12 64.7 118 99 118 99 l -12 132 l -1212 12 z"></path>
+                        <path d="M -12 201 s 70 83 194 57 s 160.29 -36.77 274 6 c 109 41 184.82 24.36 265 -15 c 55 -27 116.5 -57.69 214 4 c 49 31 95 26 95 26 l -6 151 l -1036 10 z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- 服务器介绍 -->
+            <div class="introduce-page">
+                <div class="introduce-title">
+                    <h1>为什么选择StarLight服务器?</h1>
+                    <br>
+                    <h3>来看看我们的优势！</h3>
+                </div>
+                <div class="introduce-img">
+                    <div class="introduce-card-container hidden" id="introduce-card-container">
+                        <div class="card introduce-card">
+                            <div id="introduce-text"></div>
+                        </div>
+                    </div>
+                    <div class="server-3d">
+                        <img src="./img/resources/Server-3D.svg" alt="SLS">
+                    </div>
+
+                    <div class="pointer-line lu-line">
+                        <img src="./img/resources/Pointer-Line.svg" alt="line">
+                    </div>
+                    <div class="introduce-icon-container">
+                        <img src="./img/icon/main-page/CPU.svg" alt="CPU" id="main-cpu" class="introduce-icon">
+                    </div>
+                    <div class="lu-frame introduce-frame">
+                        <div class="introduce-text">
+                            <h3>优秀的性能</h3><br>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;服务器配置了大雕AMD-5950X，足足16个核心，锁频高频4.4GHz运行，拥有着无与伦比的单核性能! 更有128G高频率DDR4内存和高性能的SSD（三星980Pro + 西数黑盘SN750）与之相配，甚至还有RTX 3080显卡？！保证给您一个告别卡顿的世界！</p>
+                        </div>
+                    </div>
+
+                    <div class="pointer-line ru-line">
+                        <img src="./img/resources/Pointer-Line.svg" alt="line">
+                    </div>
+                    <div class="introduce-icon-container">
+                        <img src="./img/icon/main-page/Survival.svg" alt="Survival" id="main-survival" class="introduce-icon">
+                    </div>
+                    <div class="ru-frame introduce-frame">
+                        <div class="introduce-text">
+                            <h3>生电的天堂</h3><br>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;除了超高的配置与性能外，我们还开创性的划分外服与内服，外服提供领地等完备系统以提供更好的轻生存体验，而内服则主打生电玩法，接收更为“硬核”的玩家，真正做到生电生存两不误！</p>
+                        </div>
+                    </div>
+
+                    <div class="pointer-line ld-line">
+                        <img src="./img/resources/Pointer-Line.svg" alt="line">
+                    </div>
+                    <div class="introduce-icon-container">
+                        <img src="./img/icon/main-page/Multi.svg" alt="Multi" id="main-multi" class="introduce-icon">
+                    </div>
+                    <div class="ld-frame introduce-frame">
+                        <div class="introduce-text">
+                            <h3>多版本兼容</h3><br>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;不论是Java版1.9.X ~ 1.20.X任一版本的玩家，还是仅有BE(基岩版)，但想跨版本进入Java服务器，与大家一同游玩的玩家，在StarLight这里都不是问题！</p>
+                        </div>
+                    </div>
+
+                    <div class="pointer-line rd-line">
+                        <img src="./img/resources/Pointer-Line.svg" alt="line">
+                    </div>
+                    <div class="introduce-icon-container">
+                        <img src="./img/icon/main-page/Ban.svg" alt="Ban" id="main-ban" class="introduce-icon">
+                    </div>
+                    <div class="rd-frame introduce-frame">
+                        <div class="introduce-text">
+                            <h3>完善的防熊</h3><br>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;通过提供领地相关的监测，您的建筑区域可仅向信任的玩家开放，确保入侵的熊孩子无法进入您的领地大搞破坏。同时基于内/外服分离的机制，通过审核更严格的内服，同样保证您不再受熊孩子的侵扰！</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="introduce-close" class="hidden">关闭介绍框</div>
+                <div class="split-line"></div>
+            </div>
+
+
+
+            <!-- 服务器 Q&A -->
+            <div class="q-a-page">
+                <h1> StarLight <a style="color: #ff9600">Q&A</a> </h1>
+                <div class="card-container">
+                    <div class="na-card">
+                        <h3>为什么我找不到进服的IP?</h3><br>
+                        <br>
+                        <p>少安毋躁，为防止假人压测等恶意攻击，同时为了方便玩家们获得更方便的交流途径，StarLight配置专用交流群与白名单机制，想要获取白名单？只需加入我们的审核QQ群：<a href="https://jq.qq.com/?_wv=1027&k=rt0b2rlH">点我入群</a> ，依照群中链接完成问卷审核，提交给审核员并等待审核通过后，依照群机器人的指引绑定你的游戏ID即可。绑定成功后即可依照群内IP进服哦！</p>
+                    </div>
+                    <div class="na-card">
+                        <h3>我该用哪个版本进服?</h3>
+                        <br>
+                        <p>如果你是Java版玩家，1.9.X ~ 1.19.X均可顺利进入大厅，但由于部分服务器存在特殊要求（如Mod服强制1.12.X+Forge），如果您需要进入生存服与起床战争以外的服务器，请在群里进行询问；如果你是Bedrock（基岩）版玩家，请使用当前最新版本进服。并请注意！基岩版由于将于Java版玩家一同游玩，所以进入后服务器一切特性遵从Java版，如若部分基岩特性（如抖沙机，特殊的红石机械）失效，为正常现象。</p>
+                    </div>
+                    <br><br>
+                </div>
+                <div class="split-line"></div>
+            </div>
+
+            <!-- 服务器状态 -->
+            <div class="server-status-page">
+                <h1> 服务器状态 </h1>
+                <div class="status-card-container card-container">
+                    <div class="na-card server-card">
+                        <div class="server-card-title">
+                            <h2>网络与玩家数据</h2>
+                        </div>
+                        <div class="server-sub-card-container">
+                            <div class="server-sub-card">
+                                <img id="ipv6-logo" src="./img/icon/signal/Connecting.svg" alt="signal">
+                                <span class="server-status">IPv6延迟：</span><div id="ipv6-ping" class="server-status">连接中...</div>
+                            </div>
+                            <div class="server-sub-card">
+                                <img id="ipv4-logo" src="./img/icon/signal/Connecting.svg" alt="signal">
+                                <span class="server-status">IPv4延迟：</span><div id="ipv4-ping" class="server-status">连接中...</div>
+                            </div>
+                            <div class="server-sub-card">
+                                <img src="./img/icon/signal/Players.svg" alt="signal">
+                                <span class="server-status">玩家数量：</span><div id="player-num" class="server-status">0</div><span class="server-status">&nbsp;/ 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="na-card server-status-card">
+                        <div class="monitor-title">
+                            <h2>服务器仪表盘</h2>
+                        </div>
+                        <div class="monitor-container">
+                            <div class="monitor-column monitor-column-1">
+                                <div id="cpu-monitor" class="monitor"></div>
+                                <div id="memory-monitor" class="monitor"></div>
+                            </div>
+                            <div class="monitor-column monitor-column-2">
+                                <div id="disk-monitor" class="monitor"></div>
+                                <div id="temperature-monitor" class="monitor"></div>
+                            </div>
+                        </div>
+                        <div class="monitor-status-container">
+                            <span id="monitor-status" class="hidden"></span>
+                            <div class="loader">
+                                <span style="--i:1">等</span>
+                                <span style="--i:2">待</span>
+                                <span style="--i:3">服</span>
+                                <span style="--i:4">务</span>
+                                <span style="--i:5">器</span>
+                                <span style="--i:6">打</span>
+                                <span style="--i:7">c</span>
+                                <span style="--i:8">a</span>
+                                <span style="--i:9">l</span>
+                                <span style="--i:10">l</span>
+                                <span style="--i:11">.</span>
+                                <span style="--i:12">.</span>
+                                <span style="--i:13">.</span>
+                            </div>
+                        </div>
+                        <span class="status-tip">Powered by OSHI for Java & Kotlin</span>
+                    </div>
+                    <div class="split-line"></div>
+                </div>
+            </div>
+
+            <!-- 玩家弹幕 -->
+            <div class="bullet-screens-page">
+                <h1> 玩家们の语录 </h1>
+                <div class="bullet-screens na-card" id="bullet-screens">
+                </div>
+            </div>
+
+            <!-- 底部备案信息 -->
+            <div class="footer">
+                <div class="sls-information">
+                    <a>StarLight ©2014-<span id="year-now"></span></a>
+                    <span><a>网站备案号：</a><a href="https://beian.miit.gov.cn"><strong>京ICP备2021010288号</strong></a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

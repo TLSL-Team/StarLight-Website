@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<!-- 作者:Disy & StarLight，拷贝及使用前请务必征得作者同意！ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <meta name="description" content="StarLight Website">
+    <meta name="keywords" content="Minecraft, StarLight, mc, 生存, 生电, 我的世界服务器, 高性能">
+    <meta name="author" content="Disy">
+
+    <title>SLS卫星地图</title>
+
+    <link rel="stylesheet" href="./css/main-style.css">
+    <link rel="stylesheet" href="./css/stars.css">
+    <link rel="shortcut icon" type="img/png" href="img/icon/icon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./img/icon/icon-57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./img/icon/icon-72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./img/icon/icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./img/icon/icon-144.png">
+    <link rel="apple-touch-icon" href="./img/icon/icon-64.png">
+
+    <script type="text/javascript" src="./js/utils.js"></script>
+    <script type="text/javascript" src="./js/fade.js"></script>
+    <script type="text/javascript" src="./js/render.js"></script>
+    <script type="text/javascript" src="./js/sakura-render.js"></script>
+    <script type="text/javascript" src="js/map-page.js"></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div id="mobile-sidebar-btn" class="hidden">☰</div>
+        <div class="sidebar-block"></div>
+        <div class="sidebar">
+            <!-- 这里包含侧边栏的元素，由js动态添加 -->
+        </div>
+        <div class="mobile-sidebar">
+            <a id="close-sidebar-btn">×</a>
+            <!-- 这里则是手机版的侧边栏元素 -->
+        </div>
+
+        <div class="main-frame">
+            <!-- 主展示页 -->
+            <div class="main-page">
+                <div class="title">
+                    <h1 id="map-title">StarLight 卫星地图</h1>
+                    <div class="subtitle"><span id="subtitle-text">上帝视角纵览各个SLS子服务器</span></div>
+                    <a id="scroll-btn"></a>
+                </div>
+                <div class="background">
+                    <img src="./img/background/bg2.jpg" alt="background">
+                </div>
+                <div class="stars-container">
+                    <div class="stars"></div>
+                    <div class="star2"></div>
+                    <div class="star3"></div>
+                </div>
+            </div>
+
+            <!-- 地图展示区 -->
+            <div class="map-page">
+                <!-- 顶端导航栏，用于主界面切换不同显示页面 -->
+                <div class="navigation-bar no-select" id="home-navigation-bar">
+                    <nav>
+                        <label class="personal-data top-btn">
+                            <a>
+                                <span class="only-large">内服</span>
+                            </a>
+                        </label>
+
+                        <label class="server-monitor top-btn">
+                            <a>
+                                <span class="only-large">1.20</span>
+                            </a>
+                        </label>
+
+                        <label class="server-monitor top-btn">
+                            <a>
+                                <span class="only-large">1.19</span>
+                            </a>
+                        </label>
+
+                        <label class="server-status-monitor top-btn">
+                            <a>
+                                <span class="only-large">1.16</span>
+                            </a>
+                        </label>
+
+                        <div class="tab" id="top-tab" style="width: 25%"></div>
+                    </nav>
+                </div>
+
+                <!-- 展示地图用的iframe -->
+                <div class="map-container">
+                    <iframe src="https://slv4.starlight.cool:8502/" height="100%" width="100%" onMouseOver="movIn()" onMouseOut="movOut()" id="map-iframe"> 新生存服 </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
