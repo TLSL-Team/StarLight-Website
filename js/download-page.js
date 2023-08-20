@@ -206,7 +206,7 @@ window.onload = function () {
     let top_btn = document.getElementsByClassName("top-btn");
     for(let i = 0; i < top_btn.length; i++){
         top_btn[i].addEventListener("click", function () {
-            document.getElementById("top-tab").style.left = ((33 * i) + "%");
+            document.getElementById("top-tab").style.left = (((33 * i) + 1) + "%");
             switch (i){
                 case 0:
                     RESOURCE_TYPE = "Java";
