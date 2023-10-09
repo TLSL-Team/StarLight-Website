@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>辐岛核废水实时监测</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <meta name="description" content="StarLight Website">
+    <meta name="keywords" content="Minecraft, StarLight, mc, 生存, 生电, 我的世界服务器, 高性能">
+    <meta name="author" content="Disy">
+
+    <link rel="stylesheet" href="./css/3rd-part/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/stars.css">
+    <link rel="stylesheet" href="./css/main-style.css">
+    <link rel="stylesheet" href="./css/wastewater.css">
+
+    <link rel="shortcut icon" type="img/png" href="img/icon/icon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./img/icon/icon-57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./img/icon/icon-72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./img/icon/icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./img/icon/icon-144.png">
+    <link rel="apple-touch-icon" href="./img/icon/icon-64.png">
+    <link rel="apple-touch-startup-image" href="/img/icon/startup.png">
+
+    <script type="text/javascript" src="js/3rd-part/jQuery.min.js"></script>
+    <script type="text/javascript" src="js/3rd-part/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./js/utils.js"></script>
+    <script type="text/javascript" src="./js/fade.js"></script>
+    <script type="text/javascript" src="./js/render.js"></script>
+    <script type="text/javascript" src="./js/sakura-render.js"></script>
+    <script type="text/javascript" src="js/wastewater/utils.js"></script>
+    <script type="text/javascript" src="js/wastewater/init.js"></script>
+
+</head>
+<body>
+    <div class="main-container">
+        <div id="mobile-sidebar-btn" class="hidden">☰</div>
+        <div class="sidebar-block"></div>
+        <div class="sidebar">
+            <!-- 这里包含侧边栏的元素，由js动态添加 -->
+        </div>
+        <div class="mobile-sidebar">
+            <a id="close-sidebar-btn">×</a>
+            <!-- 这里则是手机版的侧边栏元素 -->
+        </div>
+
+        <div class="main-frame">
+
+            <!-- 主展示页 -->
+            <div class="main-page">
+                <div class="title">
+                    <h1 id="map-title">StarLight 辐岛排污监测</h1>
+                    <div class="subtitle"><span id="subtitle-text">来自IAEA官网的小小镜像站</span></div>
+                    <a id="scroll-btn"></a>
+                </div>
+                <div class="background">
+                    <img src="./img/background/nuclear.jpg" alt="background">
+                </div>
+                <div class="stars-container">
+                    <div class="stars"></div>
+                    <div class="star2"></div>
+                    <div class="star3"></div>
+                </div>
+            </div>
+
+            <!-- 弹出框 -->
+            <div id="alps-modal-description" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 id="alps-modal-description-title" class="modal-title">{Title}</h3>
+                        </div>
+                        <div id="alps-modal-description-body" class="modal-body">{Body}</div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模型展示处 -->
+            <div class="model-frame">
+                <div class="col-md-12" id="monitor">
+                    <div class="tip-container">
+                        <div class="field-blocks">
+                            <h2 class="field-title">  免责声明  </h2>
+                            <p>本网页仅作为国际原子能机构（IAEA）的镜像站，上图中的全部信息和数据均由东京电力公司控股有限公司（TEPCO）提供。本页中出现的全部数据仅供参考，其可信性由访问者自行判断 , The Land of StarLight团队不为任何数据的准确性与真实性负责。同时，本页中的任何描述与解释内容均由IAEA官网翻译而来，不代表The Land of StarLight团队及成员的任何立场；The Land of StarLight团队坚决反对日本罔顾全球海洋安全与全球人类安全，私自排放核污水的行为。</p>
+                        </div>
+                    </div>
+
+                    <div class="tip-container" id="tip-container">
+                        <div class="field-blocks">
+                            <h2 class="field-title"> 图例 </h2>
+                            <div class="dot-container">
+                                <p>
+                                    <span class="dot-green"></span>
+                                    <strong>绿色标识</strong> – 该标识表明相关排放系统的这一方面目前正在正常运行，且<strong>东电公司</strong>报告的数据在其设置的预期水平内。
+                                </p>
+                                <p>
+                                    <span class="dot-gray"></span>
+                                    <strong>灰色标识</strong> – 该标识表明排放系统中对应的组件当前没有运行或处于脱机状态；这并不一定说明该组件问题，而是可能是由于日常维护或操作考虑（例如，实际使用的输水泵只有建设的三分之一）。
+                                </p>
+                                <p>
+                                    <span class="dot-red"></span>
+                                    <strong>红色标识</strong>&nbsp;– 该标识表明东电公司报告的数据处于异常水平，该标识的出现意味着需要东京电力公司需要采取相关行动去检查与改善相应组件的运行情况。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

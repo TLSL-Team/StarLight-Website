@@ -1,0 +1,86 @@
+.dot-green {
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    border: 1px solid #c9c9c9;
+    display: inline-block;
+    background-color: #70fa4b
+}
+
+.dot-gray {
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    border: 1px solid #c9c9c9;
+    display: inline-block;
+    background-color: #959595
+}
+
+.dot-red {
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    border: 1px solid #c9c9c9;
+    display: inline-block;
+    background-color: #de0b17
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #414141, #2b2b2c) no-repeat fixed;
+}
+
+h2, p {
+    color: #fcfcfd;
+}
+
+.modal-body p {
+    color: #000000;
+}
+
+.model-frame {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tip-container {
+    background-color: #252526;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 10px 10px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #020202;
+}
+
+.field-blocks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.field-blocks h2 {
+    margin-bottom: 20px;
+}
+
+.field-blocks p {
+    line-height: 25px;
+    margin-bottom: 30px;
+    font-size: 17px;
+}

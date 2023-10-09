@@ -44,7 +44,13 @@ const donation_list = [
     {"player": "3384391077", "money": "75.00", "time": "2023/8/18 0:06"},
     {"player": "1481567451", "money": "10.00", "time": "2023/8/18 0:06"},
     {"player": "2514109920", "money": "15.03", "time": "2023/8/19 23:02"},
-    {"player": "3384391077", "money": "90.00", "time": "2023/8/19 23:03"}
+    {"player": "3384391077", "money": "90.00", "time": "2023/8/19 23:03"},
+    {"player": "1009903743", "money": "10.00", "time": "2023/8/20 11:24"},
+    {"player": "845278358", "money": "30.00", "time": "2023/8/20 11:25"},
+    {"player": "1020091223", "money": "50.00", "time": "2023/8/20 20:10"},
+    {"player": "1902235217", "money": "50.00", "time": "2023/8/27 17:22"},
+    {"player": "3538359051", "money": "1.00", "time": "2023/8/28 21:54"},
+    {"player": "1020091223", "money": "50.00", "time": "2023/8/30 13:09"}
 ];
 
 function sumDonationMoney(){
@@ -85,14 +91,17 @@ function renderPercent() {
 let rid = setInterval(function (){
     let donation_box = document.getElementById("donation-text");
 
-    for (let ele in donation_list){
-        let donation_ele = document.createElement("p");
-        donation_ele.innerHTML = `<strong>${donation_list[ele].player}: ￥${donation_list[ele].money}</strong>`;
+    if (donation_box != null) {
+        for (let ele in donation_list){
+            let donation_ele = document.createElement("p");
+            donation_ele.innerHTML = `<strong>${donation_list[ele].player}: ￥${donation_list[ele].money}</strong>`;
 
-        donation_box.appendChild(donation_ele);
+            donation_box.appendChild(donation_ele);
+        }
+
+        clearInterval(rid);
     }
 
-    clearInterval(rid);
 }, 1);
 
 window.onload = function () {

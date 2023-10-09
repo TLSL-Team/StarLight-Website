@@ -14,7 +14,7 @@ const sidebar_elements = [
     },
 
     {
-        "href": "/download",
+        "href": "/download/",
         "id":"resource-btn",
         "text": "资源下载",
         "img":{
@@ -50,6 +50,16 @@ const sidebar_elements = [
         "img":{
             "src": "/img/icon/Wiki.svg",
             "alt": "Server"
+        }
+    },
+
+    {
+        "href": "/wastewater.html",
+        "id":"more-btn",
+        "text": "辐岛核污水",
+        "img":{
+            "src": "/img/icon/Nuclear.svg",
+            "alt": "More"
         }
     },
 

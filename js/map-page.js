@@ -47,23 +47,23 @@ window.onload = function (){
             document.getElementById("top-tab").style.left = ((25 * i) + "%");
             switch (i){
                 case 0:
-                    map_iframe.src = "https://slv4.starlight.cool:8502/";
+                    map_iframe.src = "https://www.starlight.cool/map-1.20/";
                     break;
 
                 case 1:
-                    map_iframe.src = "https://slv4.starlight.cool:8503/";
+                    map_iframe.src = "https://www.starlight.cool/map-internal/";
                     break;
 
                 case 2:
-                    map_iframe.src = "https://slv4.starlight.cool:8500/";
+                    map_iframe.src = "https://www.starlight.cool/map-1.19/";
                     break;
 
                 case 3:
-                    map_iframe.src = "https://slv4.starlight.cool:8501/";
+                    map_iframe.src = "https://www.starlight.cool/map-1.16/";
                     break;
 
                 default:
-                    map_iframe.src = "https://slv4.starlight.cool:8502/";
+                    map_iframe.src = "https://www.starlight.cool/map-1.20/";
                     break;
             }
         });
